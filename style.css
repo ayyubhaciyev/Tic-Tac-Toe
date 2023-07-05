@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background-color: rgb(20, 19, 19);
+}
+table{
+    margin: auto;
+}
+table,td{
+    border: 1px solid wheat;
+    border-collapse: collapse;
+}
+td{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: wheat;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}

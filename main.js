@@ -32,8 +32,15 @@ const createTable = () => {
 
 const clickCkeck = (i,j)=>{
     if(M[i][j] ===""){
-        M[i][j] = count % 2 !== 0 ? X : O;
-        count++;
+        if(count % 2 !== 0){
+            M[i][j] = X;
+            count++;
+            randomAdd();
+        }else{
+            M[i][j] = O;
+            count++;
+        }
+        
         createTable();
         setTimeout(checkWin,250);
     }
@@ -72,3 +79,13 @@ const checkWin = ()=>{
         location.reload();
     }
 }
+
+const randomAdd = ()=>{
+    const i = Math.floor(Math.random() * n);
+    const j = Math.floor(Math.random() * n);
+    if(M[i][j]===""){
+        clickCkeck(i,j);
+    }else{
+        randomAdd();
+    }
+};
